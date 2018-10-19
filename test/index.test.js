@@ -1,4 +1,10 @@
-import { fizzbuzz } from "../src";
+import { num } from "../src/js";
 
-describe('Index', () => {
+describe('num', () => {
+    test('Debería decir que no es una entrada válida', () => {
+        expect(num('hola')).toBe('I');
+    });
+    test('Debería convertir número a romano - Letra I', () => {
+        expect(num(1)).toBe('I');
+    });
 });
