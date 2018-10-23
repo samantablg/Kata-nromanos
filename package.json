@@ -22,5 +22,17 @@
     "transform": {
       "^.+\\.js$": "babel-jest"
     }
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samantalg/Kata-nromanos.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Samantalg/Kata-nromanos/issues"
+  },
+  "homepage": "https://github.com/Samantalg/Kata-nromanos#readme"
 }
