@@ -13,23 +13,24 @@ const equivalencia = {
     4: "IV",
     1: "I"
 };
-const equivalencia_keys = Object.keys(equivalencia).reverse();
-//al poner .key devuelve un array con las propiedades del objeto equivalencia
+
+const equiv = Object.keys(equivalencia).reverse();
+console.log(equiv);
+//al poner .keys devuelve un array con las propiedades del objeto equivalencia
+
 export const num = (value) => {
+  if ( typeof(value) == Number || value <= 0 || !Number.isInteger(value) ) {
+    console.log('error');
+  }
 
-    if (typeof num !== 'number' || num < 0 || !Number.isInteger(num)) {
-        console.log('La entrada no es válida');
+  let romano = [];
+
+  equiv.forEach(key => {
+    while (value >= key) {
+      value = value - key;
+      romano = romano + equivalencia[key];
     }
-
-    
-    let romano = [];
-
-    equivalencia_keys.forEach(key => {
-        while (num >= key) {
-            num = num -key
-            romano = romano+ equivalencia[key]
-        }
-});
+  });
 
 return romano;
 };
